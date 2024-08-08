@@ -13,7 +13,7 @@ export const Header = () => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode))
 
     if (darkMode) {
-      document.documentElement.classList.add('dark') 
+      document.documentElement.classList.add('dark')
 
 
     } else {
@@ -38,10 +38,11 @@ export const Header = () => {
           <div className="flex md:order-2">
 
             {/* Dark  Mode Toggle Button */}
-            <button id=""  type="button" className="text-gray-500  border dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none  dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-2" onClick={() => setDarkMode(!darkMode)}>
+            <button id="" type="button" className="text-gray-500  border dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none  dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-2" onClick={() => setDarkMode(!darkMode)}>
 
               {
                 darkMode ?
+
                   <img src="./sun.svg" alt="" width={20} />
                   :
                   <img src="./moon.svg" alt="" width={20} />
@@ -90,6 +91,7 @@ export const Header = () => {
               <li>
                 <NavLink to="/" className={({ isActive }) => isActive ? activeClass : inActiveClass}>Home</NavLink>
               </li>
+              
               <li>
                 <NavLink to="/popular" className={({ isActive }) => isActive ? activeClass : inActiveClass}>Popular</NavLink>
               </li>
