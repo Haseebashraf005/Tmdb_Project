@@ -2,17 +2,19 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 export const Card = ({ movie }) => {
-  console.log(movie)
+  // console.log(movie)
 
   let { id, title, overview, poster_path } = movie;
 
   let imagepath = `https://image.tmdb.org/t/p/w500/${poster_path}`
 
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-900">
+    <div className="max-w-sm  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-900">
       <Link to={`/movie/${id}`}>
         {
-          false ?
+          // false ?
+
+          poster_path ?
 
             <img className="rounded-t-lg" src={imagepath} alt="" />
             :

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Footer, Header, Popular, TopRated, UpComming } from './components'
+import { Footer, Header } from './components'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { MovieDetailPage, MovieListPage, PageNotFound, Search } from './pages';
 
@@ -13,10 +13,10 @@ const App = () => {
         <Header />
         <div className="dark:bg-slate-700">
           <Routes>
-            <Route path="/" element={<MovieListPage />} />
-            <Route path="/popular" element={<Popular />} />
-            <Route path="/toprated" element={<TopRated />} />
-            <Route path="/upcomming" element={<UpComming />} />
+            <Route path="/" element={<MovieListPage apiPath="now_playing" />} />
+            <Route path="/popular" element={<MovieListPage apiPath="popular" />} />
+            <Route path="/toprated" element={<MovieListPage apiPath="top_rated" />} />
+            <Route path="/upcomming" element={<MovieListPage apiPath="upcoming" />} />
             <Route path="/movie/:id" element={<MovieDetailPage />} />
             <Route path="/search" element={<Search />} />
             <Route path="*" element={<PageNotFound />} />

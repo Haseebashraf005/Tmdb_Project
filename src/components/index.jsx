@@ -7,11 +7,11 @@ export { Card } from "./Card"
 
 // ******************************************
 
-import Popular from "./Popular"
+// import Popular from "./Popular"
 import TopRated from "./TopRated"
 import UpComming from "./UpComming"
 
 
-export {Popular}
+// export {Popular}
 export {TopRated }
 export {UpComming }
