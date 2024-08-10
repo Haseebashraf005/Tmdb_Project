@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
-const useFetch = (url) => {
+const useFetch = (apiPath,queryTerm="") => {
 
   let [data, setData] = useState([])
+
+  let url = `https://api.themoviedb.org/3/${apiPath}?api_key=b7e24c12dfb18bec008b0a9447323750&query=${queryTerm}`
 
 
   useEffect(() => {

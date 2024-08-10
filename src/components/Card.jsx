@@ -7,6 +7,7 @@ export const Card = ({ movie }) => {
   let { id, title, overview, poster_path } = movie;
 
   let imagepath = `https://image.tmdb.org/t/p/w500/${poster_path}`
+  // console.log(imagepath)
 
   return (
     <div className="max-w-sm  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-900">
@@ -16,9 +17,9 @@ export const Card = ({ movie }) => {
 
           poster_path ?
 
-            <img className="rounded-t-lg" src={imagepath} alt="" />
+            <img className="rounded-t-lg" src={imagepath} alt="" /> 
             :
-            <img className="rounded-t-lg" src="./backup.jpg" />
+            <img className="rounded-t-lg" src="../backup.jpg" />
 
         }
       </Link>

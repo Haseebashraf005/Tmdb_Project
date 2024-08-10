@@ -43,9 +43,9 @@ export const Header = () => {
               {
                 darkMode ?
 
-                  <img src="./sun.svg" alt="" width={20} />
+                  <img src="../sun.svg" alt="" width={20} />
                   :
-                  <img src="./moon.svg" alt="" width={20} />
+                  <img src="../moon.svg" alt="" width={20} />
 
               }
 

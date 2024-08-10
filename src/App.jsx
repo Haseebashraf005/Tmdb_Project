@@ -13,12 +13,12 @@ const App = () => {
         <Header />
         <div className="dark:bg-slate-700">
           <Routes>
-            <Route path="/" element={<MovieListPage apiPath="now_playing" />} />
-            <Route path="/popular" element={<MovieListPage apiPath="popular" />} />
-            <Route path="/toprated" element={<MovieListPage apiPath="top_rated" />} />
-            <Route path="/upcomming" element={<MovieListPage apiPath="upcoming" />} />
+            <Route path="/" element={<MovieListPage apiPath="movie/now_playing" />} />
+            <Route path="/popular" element={<MovieListPage apiPath="movie/popular" />} />
+            <Route path="/toprated" element={<MovieListPage apiPath="movie/top_rated" />} />
+            <Route path="/upcomming" element={<MovieListPage apiPath="movie/upcoming" />} />
             <Route path="/movie/:id" element={<MovieDetailPage />} />
-            <Route path="/search" element={<Search />} />
+            <Route path="/search" element={<Search apiPath="search/movie" />} />
             <Route path="*" element={<PageNotFound />} />
 
           </Routes>
