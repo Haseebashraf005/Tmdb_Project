@@ -10,11 +10,22 @@ export const Search = ({ apiPath }) => {
   console.log(queryTerm)
 
 
-  let { data: movies } = useFetch(apiPath,queryTerm)
+  let { data: movies } = useFetch(apiPath, queryTerm)
 
   return (
     <>
       <main>
+        <section>
+          <p className="text-3xl text-gray-700 dark:text-white p-2">
+            {
+              movies.length > 0 ?
+                ""
+                :
+
+                `No Result Found for '${queryTerm}'`
+            }
+          </p>
+        </section>
         <section>
           {/* total length{movies.length} */}
           <div className="card-container flex flex-wrap justify-start gap-3 py-7 px-10">

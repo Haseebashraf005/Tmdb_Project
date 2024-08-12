@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const useFetch = (apiPath,queryTerm="") => {
+const useFetch = (apiPath, queryTerm = "") => {
 
   let [data, setData] = useState([])
 
@@ -11,7 +11,7 @@ const useFetch = (apiPath,queryTerm="") => {
     async function fetchMovies() {
       let response = await fetch(url);
       // console.log(response);
-      let data_api = await response.json();
+      let data_api = await response.json();  
       // console.log(data)
       // console.log(data.results)
       setData(data_api.results);

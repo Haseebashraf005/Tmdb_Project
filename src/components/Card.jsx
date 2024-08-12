@@ -13,16 +13,16 @@ export const Card = ({ movie }) => {
     <div className="max-w-sm  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-900">
       <Link to={`/movie/${id}`}>
         {
-          // false ?
+          false ?
 
-          poster_path ?
+          // poster_path ?
 
             <img className="rounded-t-lg" src={imagepath} alt="" /> 
             :
-            <img className="rounded-t-lg" src="../backup.jpg" />
+            <img className="rounded-t- lg" src="../backup1.jpg" />
 
         }
-      </Link>
+      </Link>   
       <div className="p-5">
         <Link to={`/movie/${id}`}>
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
