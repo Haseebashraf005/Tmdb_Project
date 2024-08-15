@@ -23,5 +23,7 @@ Search
 https://api.themoviedb.org/3/search/movie?api_key=b7e24c12dfb18bec008b0a9447323750&query={movie_name}
 https://api.themoviedb.org/3/search/movie?api_key=b7e24c12dfb18bec008b0a9447323750&query=Deadpool 
 
+
 movie details
 https://api.themoviedb.org/3/movie/{movie_id}?api_key=YOUR_API_KEY
+https://api.themoviedb.org/3/movie/519182?api_key=b7e24c12dfb18bec008b0a9447323750
