@@ -32,7 +32,7 @@ export const Header = () => {
     // console.log("serach is submited")
     let search_query = event.target.search_query_input.value;
     // console.log(search_query)
-    event.target.reset()
+    event.target.reset() 
     return navigate(`/search?q=${search_query}`)
 
 

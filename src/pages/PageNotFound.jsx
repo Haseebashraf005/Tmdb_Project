@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export const PageNotFound = () => {
+
+  document.title = `Page Not Found / TMDB`
   return (
     <main>
       <section>

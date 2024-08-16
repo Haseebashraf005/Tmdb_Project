@@ -13,17 +13,21 @@ export const MovieDetailPage = () => {
       let dataByID = await response.json();
       setData(dataByID);
       setLoading(false);  // Data fetched, stop loading
-      console.log(dataByID);
+      // console.log(dataByID);
     }
 
     fetchMoviebyId();
   }, [param.id]);
 
+  useEffect(()=>{
+    document.title = `${data?.title}`
+  })
+
   let imagepath =
-    // data?.poster_path 
-    false
+    data?.poster_path 
+    // false
       ? `https://image.tmdb.org/t/p/w500/${data.poster_path}`
-      : "../backup1.jpg";
+      : "../backup.jpg";
 
   if (loading) {
     return (
