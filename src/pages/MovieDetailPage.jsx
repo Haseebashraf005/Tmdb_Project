@@ -19,13 +19,13 @@ export const MovieDetailPage = () => {
     fetchMoviebyId();
   }, [param.id]);
 
-  useEffect(()=>{
+  useEffect(() => {
     document.title = `${data?.title}`
   })
 
   let imagepath =
-    data?.poster_path 
-    // false
+    // data?.poster_path 
+    false
       ? `https://image.tmdb.org/t/p/w500/${data.poster_path}`
       : "../backup.jpg";
 
@@ -61,7 +61,7 @@ export const MovieDetailPage = () => {
             </div>
 
             {/* Tags UI Area */}
-            <div className="mt-4 flex gap-6">
+            <div className="mt-4 flex flex-wrap gap-6 ">
               {data.genres?.map((item, index) => (
                 <span
                   key={index}
@@ -73,11 +73,12 @@ export const MovieDetailPage = () => {
             </div>
 
             {/* Budget Details Section */}
+
             <div className="mt-4 flex gap-4">
-              <span className="py-2.5 rounded-lg text-md tracking-wider font-medium text-gray-900 dark:text-white transition-all duration-300">
+              <span className="py- rounded-lg text-md tracking-wider font-medium text-gray-900 dark:text-white transition-all duration-300">
                 Run Time:
               </span>
-              <span className="py-2.5 rounded-lg text-md tracking-wider text-gray-800 dark:text-white transition-all duration-300">
+              <span className="py- rounded-lg text-md tracking-wider text-gray-800 dark:text-white transition-all duration-300">
                 {data.runtime} min.
               </span>
             </div>
@@ -99,24 +100,26 @@ export const MovieDetailPage = () => {
                 {data.revenue}
               </span>
             </div>
-
             <div className="mt-4 flex gap-4">
-              <span className="py-2 rounded-lg text-md tracking-wider font-medium text-gray-900 dark:text-white transition-all duration-300">
+              <span className="py- rounded-lg text-md tracking-wider font-medium text-gray-900 dark:text-white transition-all duration-300">
                 Release Date:
               </span>
-              <span className="py-2 rounded-lg text-md tracking-wider text-gray-800 dark:text-white transition-all duration-300">
+              <span className="py- rounded-lg text-md tracking-wider text-gray-800 dark:text-white transition-all duration-300">
                 {data.release_date}
               </span>
             </div>
-
             <div className="mt-4 flex gap-4">
-              <span className="py-2 rounded-lg text-md tracking-wider font-medium text-gray-900 dark:text-white transition-all duration-300">
+              <span className="py- rounded-lg text-md tracking-wider font-medium text-gray-900 dark:text-white transition-all duration-300">
                 IMDB Code:
               </span>
-              <span className="py-2 rounded-lg text-md tracking-wider text-gray-800 dark:text-white transition-all duration-300">
+              <span className="py- rounded-lg text-md tracking-wider text-gray-800 dark:text-white transition-all duration-300">
                 {data.imdb_id}
               </span>
             </div>
+
+
+
+
           </div>
         </div>
       </div>
