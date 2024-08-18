@@ -24,8 +24,8 @@ export const MovieDetailPage = () => {
   })
 
   let imagepath =
-    // data?.poster_path 
-    false
+    data?.poster_path 
+    // false
       ? `https://image.tmdb.org/t/p/w500/${data.poster_path}`
       : "../backup.jpg";
 
