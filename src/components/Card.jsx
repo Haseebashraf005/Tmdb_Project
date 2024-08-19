@@ -13,9 +13,9 @@ export const Card = ({ movie }) => {
     <div className="max-w-[95%] sm:max-w-[48%] md:max-w-[32%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-900">
       <Link to={`/movie/${id}`}>
         {
-          // false ?
+          false ?
 
-          poster_path ?
+          // poster_path ?
 
             <img className="rounded-t-lg" src={imagepath} alt="" />
             :
